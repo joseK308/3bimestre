@@ -11,9 +11,9 @@ public class Personagem : MonoBehaviour
     [SerializeField]
     private int energia;
 
-    public void atriuirVelocidade()
+    public void atriuirVelocidade( float velocidade)
     {
-        this.velocidade = this.velocidade;
+        this.velocidade = velocidade;
     }
 
     public float Velocidade()
@@ -21,9 +21,9 @@ public class Personagem : MonoBehaviour
         return this.velocidade;
     }
 
-    public void atribuirVida()
+    public void atribuirVida(int vida)
     {
-        this.vida = this.vida;
+        this.vida = vida;
     }
 
     public int Vida()
@@ -31,9 +31,9 @@ public class Personagem : MonoBehaviour
         return this.vida;
     }
 
-    public void AtribuirEnergia()
+    public void AtribuirEnergia(int energia)
     {
-        this.energia = this.energia;
+        this.energia = energia;
     }
 
     public int Energia()
