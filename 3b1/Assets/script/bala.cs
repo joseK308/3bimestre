@@ -5,11 +5,20 @@ public class bala : MonoBehaviour
     [SerializeField]private int dano = 3;
     [SerializeField]private float velocidade;
     
-   // private Renderer
+    private Renderer myRenderer;
+   private void atribuirDano(int dano)
+   {
+       this.dano = dano;
+   }
+
+   private int Dano(int dano)
+   {
+       return dano;
+   }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        myRenderer = gameObject.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -17,7 +26,7 @@ public class bala : MonoBehaviour
     {
         transform.Translate(velocidade * Time.deltaTime, 0, 0);
 
-//if (!m_Renderer.isVisible)
+        if (!myRenderer.isVisible)
         {
             Destroy(this.gameObject);
         }
@@ -30,8 +39,9 @@ public class bala : MonoBehaviour
             {   //causa dano ao inimigo
                 int novaVida = collision.gameObject.GetComponent<Personagem>().Vida() - dano;
                 collision.gameObject.GetComponent<Personagem>().atribuirVida(novaVida);
-                //mostrar quanto de vida o inimigo agora tem
-                print( "a vida restante do inimigo e " + novaVida);
+                
+                //mostrar quanto de vida o inimigo agora tem de vida
+                print( "A vida restante do inimigo e " + novaVida);
             }
             //desligar bala apoos colisao
            gameObject.SetActive(false);

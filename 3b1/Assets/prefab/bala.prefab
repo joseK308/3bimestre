@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 433863247211819824}
   - component: {fileID: 4170330525856007249}
   m_Layer: 0
-  m_Name: sBullet_0
+  m_Name: bala
   m_TagString: bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 3
+  velocidade: 5
 --- !u!50 &433863247211819824
 Rigidbody2D:
   serializedVersion: 5

@@ -3,6 +3,16 @@ using UnityEngine;
 public class inimigo : Personagem
 {
     [SerializeField]private int dano = 3;
+
+    private void atribuirDano(int dano)
+    {
+        this.dano = dano;
+    }
+
+    private int Dano(int dano)
+    {
+        return dano;
+    }
     
   
      
@@ -12,7 +22,7 @@ public class inimigo : Personagem
         
     }
 
-    // Update is called once per frame
+    // Update is called once per frame    
     void Update()
     {
         if (Vida() <= 0)
@@ -29,7 +39,7 @@ public class inimigo : Personagem
                 //causa dano ao player
               int novavida = collision.gameObject.GetComponent<Personagem>().Vida() - dano;
               collision.gameObject.GetComponent<Personagem>().atribuirVida(novavida);
-              print("a vida restante do player agora e " + novavida);
+              print("A vida restante do player agora e " + novavida);
 
               //collision.gameObject.GetComponent<Personagem>().receberDano(dano());
               
