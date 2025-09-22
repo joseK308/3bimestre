@@ -4,7 +4,6 @@ public class bala : MonoBehaviour
 {
     [SerializeField]private int dano = 3;
     [SerializeField]private float velocidade;
-    
     private Renderer myRenderer;
    private void atribuirDano(int dano)
    {
