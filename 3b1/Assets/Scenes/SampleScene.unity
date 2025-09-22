@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 80107432}
   - component: {fileID: 80107431}
   - component: {fileID: 80107430}
+  - component: {fileID: 80107433}
   m_Layer: 5
   m_Name: barra de vida
   m_TagString: Untagged
@@ -221,6 +222,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &80107433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80107428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f566c19c23787d844bedfb7975821fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderVidasRestantes: {fileID: 329654235}
+  personagem: {fileID: 811365651}
+  vidasRestantes: 0
 --- !u!1 &122348842
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +670,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &811365651 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3470402535463641717, guid: 394ae276ce340544b9228a76551bf228, type: 3}
+  m_PrefabInstance: {fileID: 4936977354852326108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa63b71002e06da44801c75e226f2609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &811365653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7863909275081431184, guid: 394ae276ce340544b9228a76551bf228, type: 3}
@@ -1018,6 +1045,10 @@ PrefabInstance:
     - target: {fileID: 289453256472037802, guid: 394ae276ce340544b9228a76551bf228, type: 3}
       propertyPath: m_Radius
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3470402535463641717, guid: 394ae276ce340544b9228a76551bf228, type: 3}
+      propertyPath: velocidade
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3470402535463641717, guid: 394ae276ce340544b9228a76551bf228, type: 3}
       propertyPath: posicaoDoPlayer
