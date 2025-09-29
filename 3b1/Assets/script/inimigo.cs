@@ -5,6 +5,8 @@ public class inimigo : Personagem
     [SerializeField]private int dano = 3;
     
     [SerializeField]private Transform  posicaoDoPlayer;
+    
+    private SpriteRenderer spriteRenderer;
 
     private void atribuirDano(int dano)
     {
@@ -21,6 +23,8 @@ public class inimigo : Personagem
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
         if (posicaoDoPlayer == null)
         {
             posicaoDoPlayer = transform.Find("Player");
@@ -30,21 +34,21 @@ public class inimigo : Personagem
     // Update is called once per frame    
     void Update()
     { 
-        //if (posicaoDoPlayer.position.x - transform.position.x > 0)
-     //   {
-     //  SpriteRenderer = true;
-     //   }
-     //   else(posicaoDoPlayer.position.x - transform.position.x < 0);
-     //   {
-     //      SpriteRenderer.flipX = false;
-     //  }
+        if (posicaoDoPlayer.position.x - transform.position.x > 0)
+       {
+         spriteRenderer.flipX = true;
+       }
+        else if(posicaoDoPlayer.position.x - transform.position.x < 0)
+       { 
+         spriteRenderer.flipX = false;
+       }
         
        if (posicaoDoPlayer != null)
        {
            Debug.Log("posicao do player " + posicaoDoPlayer.position);
            
             transform.position = Vector3.MoveTowards(transform.position,target:posicaoDoPlayer.transform.position,maxDistanceDelta:Velocidade() * Time.deltaTime);
-        }
+       }
         
         
         
